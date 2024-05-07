@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+      }
+      .main-container {
+        margin-top: 50px;
+      }
+      input {
+        padding: 10px;
+        width: 500px;
+
+        margin-top: 20px;
+      }
+
+      select {
+        padding: 18px;
+        width: 525px;
+        height: 10px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        width: 520px;
+        padding: 10px;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+        border: none;
+        text-align: center;
+      }
+
+      .h3 {
+        margin-right: 350px;
+        margin-top: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container" align="center">
+      <h2 style="margin-right: 350px">Expense Tracker</h2>
+      <form id="form-start">
+        <input
+          id="exp-des"
+          type="text"
+          placeholder="Expense Description"
+        /><br />
+        <input
+          id="select-category"
+          type="text"
+          placeholder="Where did you spent ?"
+        />
+        <br />
+        <input
+          type="number"
+          id="amount"
+          placeholder="Enter Amount"
+        /><br /><br />
+        <input class="btn" type="submit" value="Submit" />
+      </form>
+
+      <h3 class="h3">Expense Summary</h3>
+
+      <table
+        id="table"
+        cellspacing="0px"
+        width="41%"
+        cellpadding="10px"
+        border="2px "
+        class="table"
+      >
+        <thead style="background-color: green; color: white; border: none">
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+        <tbody id="expenseList"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
